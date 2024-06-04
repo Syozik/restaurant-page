@@ -1,4 +1,6 @@
 function showContact(){
+    let a = document.querySelector("#back img");
+    a.style.visibility = "visible";
     let page = document.querySelector(".main-page");
     page.innerHTML = "";
     let text = document.createElement("div");

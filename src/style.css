@@ -13,6 +13,16 @@
     src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: "chocolate";
+    src: url(../fonts/ChocolateClassicalSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "dancingScript";
+    src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+
 body{
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../pictures/background2.jpg") repeat;
     background-size: cover;
@@ -244,4 +254,14 @@ a{
 
 a:visited{
     color: blue;
+}
+
+.stuffImage{
+    object-fit: fit;
+    width: 600px;
+    /* height: 500px; */
+}
+
+.about{
+    font-family: "dancingScript";
 }
