@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cucina Felice</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="reservation.js" defer></script>
+    <script src="about.js" defer></script>
+    <script src="contact.js" defer></script>
+    
+<script defer src="index_bundle.js"></script></head>
+<body>
+    <div class="header">
+        <nav>
+            <button onclick="showMenu()">Menu</button>
+            <button onclick="showReservation()">Reservation</button>
+            <button onclick="showContact()">Contact</button>
+            <button onclick="showAbout()">About</button>
+        </nav>
+    </div>
+    <button id="back" onclick="resetPage()"><img src="../pictures/back.svg"></button>
+    <div class = "main-page">
+        <img src="../pictures/pizza.jpg" id="pizzaImage">
+        <div class="header-text">
+            Welcome to La Cucina Felice!
+        </div>
+        <img src="../pictures/caprese.jpg" id="capreseImage" alt="caprese">
+        <img src="../pictures/spaghetti.jpg" id="pastaImage">
+        <div class="welcome-message">
+            Indulge in the flavors of Italy, where every dish tells a story and every meal is a celebration of tradition and taste. At La Cucina Felice, we pride ourselves on serving authentic Italian cuisine crafted with passion and love.
+
+            <p>As the great Italian chef Lidia Bastianich once said, "<em>Cooking is an art, but all art requires knowing something about the techniques and materials.</em>" Inspired by this philosophy, our talented chefs pour their expertise into every dish, using the finest ingredients to create culinary masterpieces that delight the senses.</p>
+
+            Join us for a dining experience that's as rich in flavor as it is in tradition. From our kitchen to your table, benvenuti a La Cucina Felice!
+        </div>
+        <img src="../pictures/salad.jpg" id="saladImage" alt="salad">
+    </div>
+</body>
+</html>

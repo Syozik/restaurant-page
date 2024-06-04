@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read File Content</title>
+</head>
+<body>
+
+<input type="file" id="fileInput">
+<button onclick="readFile()">Read File</button>
+
+<script>
+function readFile() {
+  var fileInput = document.getElementById('fileInput');
+  var file = fileInput.files[0];
+  
+  if (file) {
+    var reader = new FileReader();
+    
+    reader.onload = function(event) {
+      var fileContent = event.target.result;
+      console.log("File content:", fileContent);
+      // You can now use 'fileContent' variable to access the content of the file
+    };
+    
+    reader.readAsText(file);
+  } else {
+    console.error("No file selected.");
+  }
+}
+</script>
+
+</body>
+</html>
