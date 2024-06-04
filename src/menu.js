@@ -84,5 +84,6 @@ Panna Cotta - Cream, gelatin, vanilla, berry compote.`;
     for (let sector of [appe, firstCourses, mainCourses, desserts]){
         menu.appendChild(sector);
     }
+    
     page.appendChild(menu);
 }

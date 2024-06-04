@@ -15,5 +15,5 @@ function resetPage(){
     <img src="../pictures/spaghetti.jpg" id="pastaImage">`
     document.querySelector("#back img").style.visibility = "hidden";
     document.body.style.overflow = "hidden";
-    
+    console.log("the pages been reset")
 }
