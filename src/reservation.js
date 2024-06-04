@@ -4,7 +4,7 @@ function showReservation(){
     let dialog = document.createElement("dialog");
     let dialogMessage = document.createElement("h3");
     dialogMessage.innerHTML = "You've successfully booked a table for";
-    dialogMessage.style.cssText = "color: green; margin: 0 20px 10px 20px";
+    dialogMessage.style.cssText = "color: green; margin: 0 20px 10px 20px; font-family: sans-serif; letter-spacing: 0";
     let closeButton = document.createElement("button");
     closeButton.innerText = "X";
     closeButton.style.cssText = "font-size: 12px; padding: 3px 5px; margin: 0; color: white; background: #30adc9; margin-left: auto";
@@ -96,7 +96,7 @@ function showReservation(){
         if (nameInput.value === "" || phoneInput.value === "" || dateInput.value === "") {
             newAlert.innerText = "Please fill in all required fields.";
             form.appendChild(newAlert);
-            newAlert.style.cssText = "grid-row:-3; grid-column: 1/-1; color: red";
+            newAlert.style.cssText = "grid-row:-3; grid-column: 1/-1; color: red; font-weight: bold; font-size: 1rem; text-align: center";
             return; // Exit function if validation fails
         }
 

@@ -35,19 +35,31 @@ function showContact(){
 
     contactWays.appendChild(phoneNumber);
 
-    // contactWays.appendChild(instagram);
-    // let instagramLogo = document.createElement("img");
-    // instagramLogo.setAttribute("src", "../pictures/instagram.svg");
-    // instagramLogo.className = "contactLogo";
-    // let instagram = document.createElement("div");
-    // let instagramLink = document.createElement("a");
-    // instagramLink.href = "https://instagram.com/rubansk1y";
-    // instagramLink.innerText = "@rubansk1y";
-    // instagram.appendChild(instagramLogo);
-    // instagram.appendChild(instagramLink);
-    // instagram.style.cssText = "display: flex; align-items: center; gap: 10px; padding-bottom: 5px; border-bottom: 1px solid grey"
+    let emailLogo = document.createElement("img");
+    emailLogo.setAttribute("src", "../pictures/email.svg");
+    emailLogo.className = "contactLogo";
+    let email = document.createElement("div");
+    let emailLink = document.createElement("a");
+    emailLink.href = "mailto: rubanskiysergiy@gmail.com";
+    emailLink.target = "_blank";
+    emailLink.innerText = "rubanskiysergiy@gmail.com";
+    email.appendChild(emailLogo);
+    email.appendChild(emailLink);
+    email.style.cssText = "display: flex; align-items: center; gap: 10px; padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px solid grey"
+    contactWays.appendChild(email);
 
-
+    let linkedInLogo = document.createElement("img");
+    linkedInLogo.setAttribute("src", "../pictures/linkedin.svg");
+    linkedInLogo.className = "contactLogo";
+    let linkedIn = document.createElement("div");
+    let linkedInLink = document.createElement("a");
+    linkedInLink.href = "https://www.linkedin.com/in/serhii-rubanskyi-079832210/";
+    linkedInLink.target = "_blank";
+    linkedInLink.innerText = "Serhii Rubanskyi";
+    linkedIn.appendChild(linkedInLogo);
+    linkedIn.appendChild(linkedInLink);
+    linkedIn.style.cssText = "display: flex; align-items: center; gap: 10px; padding-bottom: 5px; margin-bottom: 10px; border-bottom: 1px solid grey"
+    contactWays.appendChild(linkedIn);
     
     let instagramLogo = document.createElement("img");
     instagramLogo.setAttribute("src", "../pictures/instagram.svg");
@@ -55,18 +67,48 @@ function showContact(){
     let instagram = document.createElement("div");
     let instagramLink = document.createElement("a");
     instagramLink.href = "https://instagram.com/rubansk1y";
+    instagramLink.target = "_blank";
     instagramLink.innerText = "@rubansk1y";
     instagram.appendChild(instagramLogo);
     instagram.appendChild(instagramLink);
-    instagram.style.cssText = "display: flex; align-items: center; gap: 10px; padding-bottom: 5px; border-bottom: 1px solid grey"
+    instagram.style.cssText = "display: flex; align-items: center; gap: 10px; padding-bottom: 5px";
 
 
     contactWays.appendChild(instagram);
-    contactWays.style.cssText = "background: white; width: 300px; padding: 20px; border: 3px solid grey; margin-top: 50px";
+    contactWays.style.cssText = "background: white; width: 300px; padding: 20px; border-radius: 5px; border: 3px solid grey; margin-top: 50px; background: rgb(238,174,202); background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);";
     newBox.style.cssText = "display: flex; flex-direction: column; align-items: center";
     newBox.appendChild(contactWays);
     // newBox.appendChild();
     newBox.style.cssText += "flex-grow: 4";
+    
+    let workingHours = document.createElement("div");
+    let workingHoursText = document.createElement("h3");
+    workingHoursText.innerText = "Working Hours";
+    workingHoursText.style.cssText = "margin: 0; margin-bottom: 5px; text-align: center; color: white; text-shadow: 1px 1px 5px black";
+    workingHours.appendChild(workingHoursText);
+    let workingHoursArray = `Monday: 11AM - 11PM
+Tuesday: 11AM - 11PM
+Wednesday: 11AM - 11PM
+Thursday: 11AM - 11PM
+Friday: 11AM - 12PM
+Saturday: 10AM - 12AM
+Sunday: 10AM - 12AM`.split('\n');
+    let today = new Date().getDay();    
+    today = today==0 ? 6 : today-1;
+    for (let i = 0; i<7; i++){
+        let day = document.createElement("div");
+        day.innerText = workingHoursArray[i];
+        if (i!=0){
+            day.style.cssText = "margin-top: 10px";
+        }
+        if (i == today){
+            day.style.cssText += "color: #fde62d; text-decoration: underline";
+        }
+        console.log(today);
+        workingHours.appendChild(day);    
+    }
+    workingHours.style.cssText = "color: white; background: rgb(63,94,251);background: linear-gradient(0deg, rgba(215,33,196,1) 0%, rgba(253,177,45,1) 100%); width: 300px; padding: 20px; border-radius: 5px; border: 3px solid grey; margin-top: 50px;font-size:1.3rem;";
+    newBox.appendChild(workingHours);
     content.appendChild(newBox);
 
 }
