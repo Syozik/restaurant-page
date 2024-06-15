@@ -97,7 +97,7 @@ button{
     margin-left: 10vw;
     margin-bottom: 10vh;
     box-shadow: 3px 5px 10px 5px;
-    animation: slideInFromBottom 0.5s ease-in-out forwards;
+    animation: slideInFromBottom 0.5s ease-in forwards;
 }
 
 #pizzaImage{
@@ -109,7 +109,7 @@ button{
     margin-left: 50px;
     margin-top: 40px;
     box-shadow: 5px 3px 10px 4px;
-    animation: slideInFromLeft 1s ease-in-out forwards;
+    animation: slideInFromLeft 1s ease-in forwards;
 }
 
 @keyframes slideInFromLeft{
@@ -149,7 +149,7 @@ button{
     margin-right: 30px;
     margin-top: 40px;
     box-shadow: 2px 5px 6px 3px;
-    animation: slideInFromRight 0.5s ease-in-out forwards;
+    animation: slideInFromRight 0.5s ease-in forwards;
 }
 
 #capreseImage{
@@ -161,7 +161,7 @@ button{
     margin-left: 35vw;
     margin-top: 20vh;
     box-shadow: 1px 3px 10px 2px;
-    animation: slideInFromLeft 0.9s ease-in-out forwards;
+    animation: slideInFromLeft 0.9s ease-in forwards;
 }
 
 .welcome-message em{
